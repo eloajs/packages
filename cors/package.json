@@ -1,0 +1,46 @@
+{
+  "name": "cors",
+  "description": "CORS for Eloa",
+  "version": "1.9.0",
+  "contributors": [
+    "Aníbal Souza <anibal.souza@eloajs.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cors",
+    "eloa"
+  ],
+  "repository": "eloajs/packages",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "object-assign": "^4"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-standard": "^7",
+    "eslint-plugin-import": "^7",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "eslint-plugin-node": "^7",
+    "eslint-plugin-promise": "^7",
+    "eslint-plugin-standard": "^7",
+    "istanbul": "0.4.5",
+    "eloajs": "1.0.0",
+    "mocha": "9.1.1",
+    "nyc": "15.1.0",
+    "supertest": "1.1.0"
+  },
+  "files": [
+    "LICENSE",
+    "RELEASES.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "scripts": {
+    "lint": "eslint --plugin markdown --ext js,md .",
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot --check-leaks test/"
+  }
+}
